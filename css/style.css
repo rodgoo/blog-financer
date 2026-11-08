@@ -262,7 +262,9 @@ a { color: var(--brand); }
 }
 
 .shot {
-  background: #14171c;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 10px 30px rgba(10, 30, 22, 0.25);
@@ -271,6 +273,7 @@ a { color: var(--brand); }
 .shot img { width: 100%; }
 
 .shot figcaption {
+  flex: 1;
   background: var(--surface);
   padding: 14px 18px;
   font-size: 0.93rem;
