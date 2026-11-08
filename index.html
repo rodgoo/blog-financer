@@ -122,19 +122,19 @@
 
         <div class="shots">
           <figure class="shot">
-            <img src="img/prints/consultor.png" alt="Tela Consultor financeiro do FinanceR com o Termômetro marcando 865 de 1000, Excelente">
+            <a class="shot-link" href="img/prints/consultor.png" aria-label="Ampliar imagem"><img src="img/prints/consultor.png" alt="Tela Consultor financeiro do FinanceR com o Termômetro marcando 865 de 1000, Excelente"></a>
             <figcaption><strong>Consultor financeiro</strong> — Termômetro em 865/1000 e os cinco pilares da nota.</figcaption>
           </figure>
           <figure class="shot">
-            <img src="img/prints/mes.png" alt="Tela Meu mês com entradas, saídas, saldo em conta e gráfico de renda versus gastos">
+            <a class="shot-link" href="img/prints/mes.png" aria-label="Ampliar imagem"><img src="img/prints/mes.png" alt="Tela Meu mês com entradas, saídas, saldo em conta e gráfico de renda versus gastos"></a>
             <figcaption><strong>Meu mês</strong> — entradas, saídas, renda vs. gastos e gastos por tag.</figcaption>
           </figure>
           <figure class="shot">
-            <img src="img/prints/contas.png" alt="Tela Contas e cartões com contas a pagar em ordem e todas cobertas pelo saldo">
+            <a class="shot-link" href="img/prints/contas.png" aria-label="Ampliar imagem"><img src="img/prints/contas.png" alt="Tela Contas e cartões com contas a pagar em ordem e todas cobertas pelo saldo"></a>
             <figcaption><strong>Contas e cartões</strong> — o que vence, em que ordem pagar e o que sobra depois.</figcaption>
           </figure>
           <figure class="shot">
-            <img src="img/prints/metas.png" alt="Tela Metas e investimentos com três metas salvas e o progresso de cada uma">
+            <a class="shot-link" href="img/prints/metas.png" aria-label="Ampliar imagem"><img src="img/prints/metas.png" alt="Tela Metas e investimentos com três metas salvas e o progresso de cada uma"></a>
             <figcaption><strong>Metas e investimentos</strong> — progresso de cada meta e o aporte planejado.</figcaption>
           </figure>
         </div>
@@ -193,5 +193,26 @@
       <p class="footer-bottom">© 2026 FinanceR Blog · Rodrigo Carvalho Machado</p>
     </div>
   </footer>
+  <dialog class="lightbox" id="lightbox" aria-label="Imagem ampliada">
+    <button type="button" class="lightbox-close" aria-label="Fechar">&times;</button>
+    <img src="" alt="">
+  </dialog>
+  <script>
+    (function () {
+      var box = document.getElementById("lightbox");
+      if (!box || !box.showModal) return;
+      var big = box.querySelector("img");
+      document.querySelectorAll(".shot-link").forEach(function (link) {
+        link.addEventListener("click", function (e) {
+          e.preventDefault();
+          var img = link.querySelector("img");
+          big.src = link.href;
+          big.alt = img.alt;
+          box.showModal();
+        });
+      });
+      box.addEventListener("click", function () { box.close(); });
+    })();
+  </script>
 </body>
 </html>
