@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-label="Medidor semicircular de saúde financeira marcando 720 pontos">
+<rect width="800" height="500" fill="#fbf1dc"/>
+<circle cx="120" cy="90" r="60" fill="#f4dfb2"/><circle cx="700" cy="420" r="90" fill="#f4dfb2"/>
+<g fill="none" stroke-width="46">
+<path d="M190 360 A210 210 0 0 1 252 211" stroke="#d96b4a"/>
+<path d="M252 211 A210 210 0 0 1 400 150" stroke="#e8a33d"/>
+<path d="M400 150 A210 210 0 0 1 548 211" stroke="#c9c24a"/>
+<path d="M548 211 A210 210 0 0 1 610 360" stroke="#3f9a6f"/>
+</g>
+<line x1="400" y1="360" x2="545" y2="225" stroke="#0a3f30" stroke-width="12" stroke-linecap="round"/>
+<circle cx="400" cy="360" r="26" fill="#0a3f30"/><circle cx="400" cy="360" r="10" fill="#d99a2b"/>
+<text x="400" y="440" text-anchor="middle" font-family="Georgia,serif" font-size="56" font-weight="700" fill="#0a3f30">720</text>
+<text x="400" y="472" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="20" fill="#4d5a54">de 1000 pontos · saudável</text>
+<text x="170" y="400" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#4d5a54">0</text>
+<text x="630" y="400" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif" font-size="18" fill="#4d5a54">1000</text>
+</svg>

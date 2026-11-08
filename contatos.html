@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fale com o FinanceR Blog: dúvidas, sugestões de artigos e contato sobre o app.">
+  <title>Contatos | FinanceR Blog</title>
+  <link rel="icon" href="img/financer-logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Merriweather:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html"><img src="img/financer-logo-branco.svg" alt=""><span class="logo-text">Finance<span>R</span> Blog</span></a>
+      <nav class="site-nav" aria-label="Navegação principal">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="termometro.html">Termômetro</a></li>
+          <li><a href="organizacao.html">Organização</a></li>
+          <li><a href="investimentos.html">Investimentos e Metas</a></li>
+          <li><a href="contatos.html" aria-current="page">Contatos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="eyebrow">Fale com a gente</p>
+        <h1>Contatos</h1>
+        <p>Tem uma dúvida sobre finanças pessoais, uma sugestão de artigo ou quer saber mais sobre o FinanceR? Mande uma mensagem.</p>
+      </div>
+    </section>
+
+    <div class="container contact-grid">
+      <form class="form" id="contact-form" novalidate>
+        <h2>Envie sua mensagem</h2>
+        <div class="field">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        </div>
+        <div class="field">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" placeholder="voce@exemplo.com" required>
+        </div>
+        <div class="field">
+          <label for="assunto">Assunto</label>
+          <select id="assunto" name="assunto">
+            <option>Dúvida sobre um artigo</option>
+            <option>Sugestão de tema</option>
+            <option>Quero conhecer o FinanceR</option>
+            <option>Outro assunto</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="mensagem">Mensagem</label>
+          <textarea id="mensagem" name="mensagem" placeholder="Escreva aqui" required></textarea>
+        </div>
+        <button type="submit" class="btn">Enviar mensagem</button>
+        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-info">
+        <h2>Outros canais</h2>
+        <div class="side-box">
+          <h3>Autor</h3>
+          <p>Rodrigo Carvalho Machado</p>
+        </div>
+        <div class="side-box">
+          <h3>GitHub</h3>
+          <p><a href="https://github.com/rodgoo" target="_blank" rel="noopener">github.com/rodgoo</a></p>
+        </div>
+        <div class="side-box">
+          <h3>O app</h3>
+          <p><a href="https://financer.notter.com.br" target="_blank" rel="noopener">financer.notter.com.br</a></p>
+        </div>
+        <div class="side-box">
+          <h3>Tempo de resposta</h3>
+          <p>Respondemos em até 2 dias úteis.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>FinanceR Blog</h4>
+          <p>Finanças pessoais explicadas a partir do uso real de um consultor financeiro. Conteúdo educativo, não é recomendação de investimento.</p>
+          <a class="powered" href="https://notter.com.br" target="_blank" rel="noopener"><img src="img/notter.svg" alt="">Powered by <strong>Notter</strong></a>
+        </div>
+        <div>
+          <h4>Páginas</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="termometro.html">Termômetro</a></li>
+            <li><a href="organizacao.html">Organização</a></li>
+            <li><a href="investimentos.html">Investimentos e Metas</a></li>
+            <li><a href="contatos.html">Contatos</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>O app</h4>
+          <ul>
+            <li><a href="https://financer.notter.com.br" target="_blank" rel="noopener">Abrir o FinanceR</a></li>
+            <li><a href="index.html#app">Telas e funções</a></li>
+          </ul>
+        </div>
+      </div>
+      <p class="footer-bottom">© 2026 FinanceR Blog · Rodrigo Carvalho Machado</p>
+    </div>
+  </footer>
+  <script>
+    document.getElementById("contact-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      var status = document.getElementById("form-status");
+      if (!this.checkValidity()) {
+        status.style.color = "#b3261e";
+        status.textContent = "Preencha nome, um e-mail válido e a mensagem.";
+        return;
+      }
+      status.style.color = "";
+      status.textContent = "Obrigado, " + this.nome.value.split(" ")[0] + "! Sua mensagem foi registrada.";
+      this.reset();
+    });
+  </script>
+</body>
+</html>
